@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TensorHub | TensorAgora</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b1020;
+      --card: #141b34;
+      --text: #f5f8ff;
+      --muted: #b7c2e2;
+      --accent: #60a5fa;
+      --accent-2: #22d3ee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, var(--bg) 50%);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    main {
+      width: min(920px, 100%);
+      background: color-mix(in srgb, var(--card), #000 10%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0.75rem 0 0;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0b1020;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .tile {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .tile h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent-2);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">TensorAgora</span>
+    <h1>TensorHub: the Hugging Face-style home for tensors</h1>
+    <p>
+      TensorHub is a model-and-tensor sharing platform focused on tensor-native workflows:
+      discover reusable tensors, publish structured tensor artifacts, and build reproducible
+      ML pipelines with confidence.
+    </p>
+
+    <section class="grid" aria-label="TensorHub features">
+      <article class="tile">
+        <h2>Tensor Discovery</h2>
+        <p>Search and filter public tensors by shape, modality, and domain metadata.</p>
+      </article>
+      <article class="tile">
+        <h2>Versioned Artifacts</h2>
+        <p>Track tensor updates with immutable versions and clear lineage.</p>
+      </article>
+      <article class="tile">
+        <h2>Fast Integration</h2>
+        <p>Plug tensors directly into training and evaluation workflows.</p>
+      </article>
+    </section>
+
+    <footer>
+      Live at <a href="https://tensoragora.github.io/">tensoragora.github.io</a>.
+    </footer>
+  </main>
+</body>
+</html>
